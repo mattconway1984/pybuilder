@@ -138,8 +138,7 @@ automatically staged):
 	new file:   .gitattributes
 	new file:   .gitmodules
 	new file:   MANIFEST.in
-	new file:   avcadlib/_version.py
-	new file:   builder
+	new file:   my_project/_version.py
 	modified:   setup.py
 	new file:   versioneer.py
 ...
@@ -178,7 +177,7 @@ to the *PyBuilder*; this is done by running the following command:
 [user@machine]$ git submodule add <PYBUILDER> 
 ```
 
-The result should be that the builder repository is now cloned into your 
+The result should be that the pybuilder repository is now cloned into your 
 project (as a git submodule), for example:
 
 ```
@@ -186,7 +185,7 @@ my_project
  |
  |-- setup.py
  |-- mypymodule
- |-- builder
+ |-- pybuilder
 ```
 
 ### Updating PyBuilder
@@ -196,7 +195,7 @@ need to do is run the following commands:
 
 ```
 [user@machine]$ git submodule update --init --remote --force
-[user@machine]$ git add builder
+[user@machine]$ git add pybuilder
 [user@machine]$ git commit -m "Updating to latest PyBuilder"
 ```
 
@@ -210,7 +209,7 @@ the Python project.
 To invoke the *PyBuilder* simply execute the following command:
 
 ```
-[user@machine]$ ./builder/env.sh make <RULE>
+[user@machine]$ ./pybuilder/env.sh make <RULE>
 ```
 
 Where <b>RULE</b> must be set to one of the following:
